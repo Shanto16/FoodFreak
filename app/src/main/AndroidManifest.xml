@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".StartingPage" />
+        <activity android:name=".MealHistory" />
+        <activity android:name=".NutritionPage"></activity>
     </application>
 
 </manifest>
