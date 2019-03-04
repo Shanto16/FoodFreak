@@ -9,7 +9,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    CardView cameraCard;
+    CardView cameraCard,historyCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         cameraCard = findViewById(R.id.camera_card);
+        historyCard = findViewById(R.id.history_card);
 
 
         cameraCard.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent,0);
 
+            }
+        });
+
+        historyCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MealHistory.class));
             }
         });
     }
